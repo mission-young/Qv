@@ -80,6 +80,7 @@ void MainWindow::on_lw_opf_itemDoubleClicked(QListWidgetItem *item)
     if(s.exec()==QDialog::Accepted){
         ui->lw_opf->currentItem()->setText(s.name());
     }
+    //test 2
 }
 
 
