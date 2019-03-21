@@ -35,7 +35,14 @@ void MainWindow::on_btn_start_clicked()
 
 void MainWindow::on_btn_ipf_clicked()
 {
-    foreach (auto ipfname, QFileDialog::getOpenFileNames()) {
+    foreach (auto ipfname, QFileDialog::getOpenFileNames(this,"载入文件","","视频 (*.avi \
+                                                         *.wmv *.rm *rmvb *.mpeg1 *.mpeg2 \
+                                                         *.mpeg4 *.mpg *.mp4 *.3gp *.asf *.swf \
+                                                         *.vob *.dat *.mov *.m4v *.flv *.f4v \
+                                                         *.mkv *.mts *.ts);;音频 (*.cd \
+                                                         *.wave *.aiff *.mpeg *.mp3 *.mpeg-4 \
+                                                         *.mid *.wma *.ra *.rm *.rmx *.vqf \
+                                                         *.ogg *.amr *.ape *.flac *.aac)")) {
         ui->lw_ipf->addItem(QFileInfo(ipfname).path()+"/"+QFileInfo(ipfname).fileName());
     }
 }
